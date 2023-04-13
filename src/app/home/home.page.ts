@@ -64,7 +64,6 @@ export class HomePage implements OnInit {
     this.loading = true
     this.getAllProducts().subscribe((res) => {
       this.products = res;
-      console.log(this.products);
 
       this.loading = false
     }, (err) => {
@@ -84,8 +83,10 @@ export class HomePage implements OnInit {
   // ##################################################################################
 
   get_products_by_category(value: string) {
+    this.loading = true
     this.getProductsBy(value).subscribe((res: any) => {
       this.products = res
+      this.loading = false
     }, (err) => {
       alert('Error')
     })

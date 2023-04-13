@@ -19,10 +19,10 @@
     </div>
 
 
-  <ion-row>
+  <ion-row *ngIf="!loading">
     <ion-col size="12" *ngFor="let p of products">
 
-      <ion-card (click)="detail(p.id)" *ngIf="!loading">
+      <ion-card (click)="detail(p.id)" >
         <ion-card-content>
           <div class="card-content">
             <div class="card-text">

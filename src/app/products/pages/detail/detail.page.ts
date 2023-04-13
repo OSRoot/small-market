@@ -62,10 +62,8 @@ export class DetailPage implements OnInit {
   getOneProduct() {
     this.loading = true
     this.http.get(BASEAPI + 'products/' + this.id).subscribe((res: any) => {
-      console.log(this.product);
       this.product = res;
       this.loading = false
-      console.log(this.product);
 
     }, (err) => {
       alert('Error')
