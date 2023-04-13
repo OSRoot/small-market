@@ -1,0 +1,7 @@
+<ion-item>
+  <ion-label>Select a Category:</ion-label>
+  <ion-select interface="popover" (ionChange)="filteration($event)">
+    <ion-select-option value="all">All</ion-select-option>
+    <ion-select-option value="{{option}}" *ngFor="let option of data">{{option}}</ion-select-option>
+  </ion-select>
+</ion-item>
